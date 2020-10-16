@@ -1,0 +1,37 @@
+***Briefly compare and contrast .forEach & .map (2-3 sentences max):
+    The differences between .forEach and .map is; .forEach doesn't return a new array, you would have to 
+    create it; while .mao automatically returns a new array. In addition, .forEach goes threw all the data, 
+    while .map converts data. Also, .forEach has a return as optional, while .map needs a return.
+
+***Explain the difference between a callback and a higher order function:
+    The difference is a Higher Order Function recieves information and callback functions are passed/run
+    through the Higher Order functions.
+
+***What is closure?:
+    A closure is when a innerscope function looks to an outer scope function to reference the outer scopes 
+    variable in order for the innerscope function to complete what were telling it to.
+
+***Describe the four rules of the 'this' keyword:
+
+'this' = used in replace of an object
+
+    1- Window Binding: If Implicit Binding, Explicit Binding or New Binding does not apply, the function 
+    will default to the window, unless you create a strict mode that returns as 'undefined'
+
+    2- Implicit Binding: When you look to the left of the dot, that is signifying what the 'this' 
+    refers to; WHEN the function is invoked
+
+    3- Explicit Binding: When you use either a .call, .apply, or .bind method
+        .call = passes in arguments 1 by 1 and immediately invokes the function
+        .bind = passes in arguments 1 by 1; however, it does NOT immediately invoke the
+                function and instead, returns a new function that can later be invoked
+        .apply = is barley used; however, it passes in arguements as an array and immediately invokes 
+                the function
+    4- New Binding: when a function is invoked as a constructor function by using a 'new' keyword
+                    and causes it to point to the new object that created
+
+***Why do we need super() in an extended class?:
+    an extend tells the function who the parent is, which then tells super() what to super to (basically
+    doing what .call and .create does). So forth, super() inherits all the attributes from its parent AND creates 
+    new attributes that would be specifically to that child function (the parent function would not have
+    those new attributes)
