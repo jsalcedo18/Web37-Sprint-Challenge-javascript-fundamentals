@@ -67,7 +67,7 @@ return accumulator + item.population;
 },0);
 console.log(populationTotal);
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////Complete/////////////////////////////////////////////////////////////
 // ==== Callbacks ====  
 
 /* Step 1: Create a higher-order function
@@ -77,6 +77,22 @@ console.log(populationTotal);
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
+function consume(a, b, cb){
+	return cb(a, b);
+}
+
+function callback(a, b){
+	return `Letter ${a} and Letter ${b} are Arguements in higher-order function consume`;
+}
+
+console.log(consume('A', 'B', callback));
+
+//Notes:
+//'A' subsitutes in for parameter a
+//'B' substitutes in for parameter b
+//callback is saying that parameter cb is substituting with a function of callback
+
+//////////////////////////////////////////////////////////////Complete/////////////////////////////////////////////////////////////
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
@@ -84,16 +100,38 @@ console.log(populationTotal);
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+function consume(a, b, cb){
+	return cb(a, b);
+}
+
+/* 1 */ function add(a, b){
+					return `function add: ${a+b}`;
+}
+
+/* 2 */ function multiply(a, b){
+					return `function multiply: ${a * b}`;
+}
+
+/* 3 */ function greeting(firstName, lastName){
+					return `Hello ${firstName} ${lastName}, nice to meet you!`;
+}
+
+console.log(consume(8, 0, add));
+console.log(consume(8, 2, multiply));
+console.log(consume('Jaynee', 'Salcedo', greeting));
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
-
+//Correct
 
 
 /*
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
